@@ -5,3 +5,7 @@ nav {
 .marginBottom {
   margin-bottom: 20px;
 }
+
+#map {
+  height: 93vh;
+}
