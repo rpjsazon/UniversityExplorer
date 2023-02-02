@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <!--CSS Style Here!-->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <!--Icon Library-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>University Explorer Guide</title>
   <link rel="icon" type="image/png" href="./assets/images/pin-map.svg"/>
@@ -55,8 +57,21 @@
   </div>
 
 </div>
-
-  
+<!-- Search Form-->
+<div>
+  <form class="uniSearch" action="/action_page.php" style="margin:auto; max-width:300px">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="search"></i></button>
+  </form>
+</div>
+<!-- Auto compleate Search form-->
+ <!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="action_page.php">
+  <div class="autocomplete" style="margin:auto; max-width:300px;">
+    <input id="myInput" type="text" name="myCountry" placeholder="Country">
+  </div>
+  <input type="submit">
+</form> 
  
 
   
@@ -64,8 +79,7 @@
 
 
 
-  
-  
+ 
   <!--Moment.js CDNJS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--Bootstrap jsdevivr-->
