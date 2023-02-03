@@ -22,7 +22,7 @@ function onLocationFound(e) {
 	const radius = e.accuracy / 2;
 
     const locationMarker = L.marker(e.latlng).addTo(map)
-	.bindPopup(`You are within ${radius} meters from this point`).openPopup();
+	.bindPopup("You are here - Test ( Patrick )").openPopup();
 
 	const locationCircle = L.circle(e.latlng, radius).addTo(map);
 }
