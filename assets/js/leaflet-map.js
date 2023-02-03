@@ -11,6 +11,7 @@
 //     .openPopup();
 
 // Reference: https://leafletjs.com/examples/mobile/example.html - Showing Current Location
+// We can use current location to calculate distance to the places.
 const map = L.map('map').fitWorld();
 
 const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
