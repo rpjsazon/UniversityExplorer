@@ -53,6 +53,3 @@ function createMarkers(place) {
     place1.addTo(map);
     place1.bindPopup(`<b>${tripOMG.placeName}</b><br>`).openPopup();
 }
-
-
-
