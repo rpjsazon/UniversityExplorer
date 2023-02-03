@@ -1,42 +1,6 @@
 nav {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
 }
-
-/* Search box */
-* {
-  box-sizing: border-box;
-}
-form.uniSearch input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
-/* Submit Button */
-form.uniSearch button {
-  float:left;
-  width: 20%;
-  padding: 10px;
-  background: #2196f3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevents double border */
-  cursor: pointer;
-}
-form.uniSearch button:hover {
-  background: #0b7dda;
-}
-
-/* clear floats */
-form.uniSearch::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /* Autocompleate Form */
 * { box-sizing: border-box; }
 body {
