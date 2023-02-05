@@ -14,16 +14,3 @@ const apiKey = "5ae2e3f221c38a28845f05b6b42147a616a1f65641534f42bb6be75f";
 //     });
 //   });
 // }
-
-// function displayPlaces() {
-
-//   var placesMarker = $(this).attr("data-name");
-//   var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=" + apiKey;
-
-//   $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(function(response) {
-//     $("#movies-view").text(JSON.stringify(response));
-//   });
-// }

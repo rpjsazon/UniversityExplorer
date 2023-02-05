@@ -48,7 +48,7 @@
     </nav>
   </header>
 
-  <main>
+  <main class="mainBody">
     <!--For List of Places-->
     <div class="container-fluid">
       <div class="row">
@@ -73,7 +73,7 @@
           <p>Take a look around</p>
 
           <!--Places List-->
-          <ol class="list-group list-group-numbered">
+          <ol class="list-group list-group-numbered marginBottom">
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto">
                 <div class="fw-bold">Subheading</div>
@@ -99,7 +99,10 @@
         </div>
 
         <!--For Map Interface (LeafLet)-->
-        <div id="map" class="col-md-9"></div>
+        <div id="map" class="col-md-9">
+          <button id="rel" href="#mainBody">Move Up</button>
+        </div>
+        
 
       </div>
     </div>

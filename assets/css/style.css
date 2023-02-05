@@ -7,6 +7,14 @@ nav {
 }
 
 #map {
-  height: 93vh;
+  height: 94vh;
+  
 }
 
+#rel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  z-index: 500;
+}

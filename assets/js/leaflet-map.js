@@ -22,7 +22,7 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function onLocationFound(e) {
 	const radius = e.accuracy / 2;
 
-    const locationMarker = L.marker(e.latlng).addTo(map)
+  const locationMarker = L.marker(e.latlng).addTo(map)
 	.bindPopup("You are here - Test ( Patrick )").openPopup();
 
 	const locationCircle = L.circle(e.latlng, radius).addTo(map);
