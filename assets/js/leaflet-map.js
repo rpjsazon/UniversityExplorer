@@ -19,17 +19,38 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-document.getElementById("locateRel").addEventListener("click", locateMe)
+document.getElementById("locateRel").addEventListener("click", locateMe);
 
 function locateMe() {
 
+	// Locate me marker.
+	var homeIcon = L.icon({
+		iconUrl: './assets/images/location-dot-solid.svg',
+		iconSize:     [38, 95], // size of the icon
+		popupAnchor:  [-3, -40] // point from which the popup should open relative to the iconAnchor
+
+    // shadowSize:   [50, 64], // size of the shadow
+    // iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    // shadowAnchor: [4, 62],  // the same for the shadow
+    
+	})
+
 	function onLocationFound(e) {
-		const radius = e.accuracy / 2;
+		var radius = e.accuracy / 2;
 	
-		const locationMarker = L.marker(e.latlng).addTo(map)
-		.bindPopup("You are here - Test ( Patrick )").openPopup();
+		var locationMarker = L.marker(e.latlng,{icon: homeIcon}).addTo(map)
+		.bindPopup("You are here.").openPopup();
 	
-		const locationCircle = L.circle(e.latlng, radius).addTo(map);
+		var locationCircle = L.circle(e.latlng, radius).addTo(map);
+
+		var latLng = locationMarker.getLatLng();
+		var lat = latLng.lat;
+		var lng = latLng.lng;
+		var location = "Latitude: " + lat + ", Longitude: " + lng;
+		console.log(location);
+
+		document.getElementById("currentLocationText").textContent = location;
+
 	}
 	
 	function onLocationError(e) {
@@ -39,7 +60,5 @@ function locateMe() {
 	map.on('locationfound', onLocationFound);
 	map.on('locationerror', onLocationError);
 	map.locate({setView: true, maxZoom: 16});
-	
+
 }
-
-
