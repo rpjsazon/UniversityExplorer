@@ -19,19 +19,27 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-function onLocationFound(e) {
-	const radius = e.accuracy / 2;
+document.getElementById("locateRel").addEventListener("click", locateMe)
 
-  const locationMarker = L.marker(e.latlng).addTo(map)
-	.bindPopup("You are here - Test ( Patrick )").openPopup();
+function locateMe() {
 
-	const locationCircle = L.circle(e.latlng, radius).addTo(map);
+	function onLocationFound(e) {
+		const radius = e.accuracy / 2;
+	
+		const locationMarker = L.marker(e.latlng).addTo(map)
+		.bindPopup("You are here - Test ( Patrick )").openPopup();
+	
+		const locationCircle = L.circle(e.latlng, radius).addTo(map);
+	}
+	
+	function onLocationError(e) {
+		alert(e.message);
+	}
+
+	map.on('locationfound', onLocationFound);
+	map.on('locationerror', onLocationError);
+	map.locate({setView: true, maxZoom: 16});
+	
 }
 
-function onLocationError(e) {
-	alert(e.message);
-}
 
-map.on('locationfound', onLocationFound);
-map.on('locationerror', onLocationError);
-map.locate({setView: true, maxZoom: 16});
