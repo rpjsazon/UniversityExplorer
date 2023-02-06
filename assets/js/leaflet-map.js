@@ -43,12 +43,13 @@ function locateMe() {
 	
 		var locationCircle = L.circle(e.latlng, radius).addTo(map);
 
+		// To get the marker location and display it to html document page.
 		var latLng = locationMarker.getLatLng();
 		var lat = latLng.lat;
 		var lng = latLng.lng;
 		var location = "Latitude: " + lat + ", Longitude: " + lng;
+		
 		console.log(location);
-
 		document.getElementById("currentLocationText").textContent = location;
 
 	}
