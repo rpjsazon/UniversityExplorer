@@ -1,36 +1,40 @@
+let uniQuery = "";
 // Alert to show input of search //
-const searchButton = document.getElementById('button-search');
-const searchInput = document.getElementById('textbox-search');
-searchButton.addEventListener('click', () => {
-    const uniName = searchInput.value;
-    alert(uniName);
+const searchButton = $('#button-search');
+const searchInput = $('#textbox-search');
+const searchForm = $('#searchForm');
+searchForm.on("submit", function (event) {
+    event.preventDefault();
+    let uniName = searchInput.val();
+    console.log("uniName", uniName);
+    // uniQuery = `http://universities.hipolabs.com/search?name=${uniName}`;
+
+    // return uniQuery;
 });
+
+// hipoUniAjax(uniQuery)
 //
-$.getJSON(
-    "http://universities.hipolabs.com/search?name=${uniName}",
-    function (data) {
-        console.log(data);
+// $.getJSON(
+//     "http://universities.hipolabs.com/search?name=${uniName}",
+//     function (data) {
+//         console.log(data);
 
-    }
-);
+//     }
+// );
 
 //
-let uniQuery = `http://universities.hipolabs.com/search?name=${uniName}`;
-//search by university - offer Unis by name to select
-async function hipoUniAjax() {
-    await $.ajax({
-        url: uniQuery,
-        method: 'GET'
-    }).then(function (response) {
-        for (let i = 0; i < response.length; i++) {
-            let nameTown = response[i].name;
-            let dns = response[i].domains[0];
-            console.log("dns", dns);
-            console.log("data", nameTown);
-        }
 
 
-        // return data;
-    });
-}
-hipoUniAjax();
+;
+// search by university - offer Unis by name to select;
+// async function hipoUniAjax() {
+//     await $.ajax({
+//         url: uniQuery,
+//         method: 'GET'
+//     }).then(function (response) {
+//         for (let i = 0; i < response.length; i++) {
+//             let nameTown = response[i].name;
+//             console.log("data", nameTown);        // return data;
+//         }
+//     });
+// }
