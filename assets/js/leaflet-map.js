@@ -38,16 +38,17 @@ function locateMe() {
 	function onLocationFound(e) {
 		var radius = e.accuracy / 2;
 	
-		var locationMarker = L.marker(e.latlng,{icon: homeIcon}).addTo(map)
-		.bindPopup("You are here.").openPopup();
-	
-		var locationCircle = L.circle(e.latlng, radius).addTo(map);
+		var locationMarker = L.marker(e.latlng,{icon: homeIcon}).addTo(map).bindPopup("You are here.").openPopup();
+
+		// var locationCircle = L.circle(e.latlng, radius).addTo(map);
 
 		// To get the marker location and display it to html document page.
 		var latLng = locationMarker.getLatLng();
 		var lat = latLng.lat;
 		var lng = latLng.lng;
 		var location = "Latitude: " + lat + ", Longitude: " + lng;
+
+		L.map.flyTo([latLng]);
 		
 		console.log(location);
 		document.getElementById("currentLocationText").textContent = location;
