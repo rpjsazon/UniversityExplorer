@@ -48,8 +48,6 @@ function locateMe() {
 		var lng = latLng.lng;
 		var location = "Latitude: " + lat + ", Longitude: " + lng;
 
-		L.map.flyTo([latLng]);
-		
 		console.log(location);
 		document.getElementById("currentLocationText").textContent = location;
 
