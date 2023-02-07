@@ -15,22 +15,22 @@ $.getJSON(
 );
 
 //
-let uniName = "kent";
-
 let uniQuery = `http://universities.hipolabs.com/search?name=${uniName}`;
 //search by university - offer Unis by name to select
-function hipoUniAjax() {
-    $.ajax({
+async function hipoUniAjax() {
+    await $.ajax({
         url: uniQuery,
         method: 'GET'
     }).then(function (response) {
         for (let i = 0; i < response.length; i++) {
-            let data = response[i].name;
-            console.log("data", data);
+            let nameTown = response[i].name;
+            let dns = response[i].domains[0];
+            console.log("dns", dns);
+            console.log("data", nameTown);
         }
 
 
-        return data;
+        // return data;
     });
 }
 hipoUniAjax();
