@@ -15,7 +15,7 @@ $(document).ready(function () {
 searchForm.on("submit", function (event) {
     event.preventDefault();
     let uniName = searchInput.val();
-    uniQuery = `http://universities.hipolabs.com/search?name=${uniName}`;
+    uniQuery = `https://cors-anywhere.herokuapp.com/http://universities.hipolabs.com/search?name=${uniName}`;
     hipoUniAjax(uniQuery);
 });
 // search by university - offer Unis by name to select;
