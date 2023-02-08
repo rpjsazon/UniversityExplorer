@@ -33,4 +33,3 @@ async function hipoUniAjax() {
         // return data;
     });
 }
-hipoUniAjax();
