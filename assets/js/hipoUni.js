@@ -18,6 +18,7 @@ async function hipoUniAjax() {
         // return data;
     });
 }
+
 hipoUniAjax();
 //extract domain
 //add domain into IP

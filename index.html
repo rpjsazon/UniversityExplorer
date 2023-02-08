@@ -13,6 +13,10 @@
     <!--Leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+    <!--Jquery UI-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <!--CSS Style Here!-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>University Explorer Guide</title>
@@ -64,11 +68,10 @@
 
             <!--Search-->
             <form id="searchForm" class="d-flex marginBottom" role="search">
-              <input id="textbox-search" class="form-control me-2" type="search" placeholder="Search"
+              <input id="textbox-search" class="form-control me-2" type="search" placeholder="Search University"
                 aria-label="Search">
               <button id="button-search" class="btn btn-outline-success" type="submit">Search</button>
             </form>
-
 
             <!--List of interesting place to visit near the radius of the location.-->
             <div class="list">
@@ -142,30 +145,32 @@
       </div>
     </main>
 
+    <!---------------------  Plugin's'Here  ---------------------->
     <!--Map Leaflet-->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <!--Moment.js CDNJS
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!--Bootstrap jsdevivr-->
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"></script>
     <!--Project Script Here-->
-    <script src="./assets/js/script.js"></script>
+    <!--<script src="./assets/js/script.js"></script>-->
     <script src="./assets/js/leaflet-map.js"></script>
     <script src="./assets/js/placesList.js"></script>
-<<<<<<< HEAD
-    <script src="./assets/js/hipoUni.js"></script>
-    <script src="./assets/js/autocompleteSearch.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-=======
+    <!--<script src="./assets/js/hipoUni.js"></script>-->
+    <script src="./assets/js/autocompleteSearch.js"></script>
+    
+
+
     <!-- <script src="./assets/js/hipoUni.js"></script> -->
->>>>>>> 8750e1d898e55b16bbba10a605a704f8a98d7c88
+
 
     <!-- <script src="./assets/js/trip.js"></script> -->
 
