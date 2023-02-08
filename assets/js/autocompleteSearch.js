@@ -3,11 +3,11 @@ $(document).ready(function(){
   // Source: Jquery UI
   // https://www.youtube.com/watch?v=aRIrxQWM-kw
   $.ajax({
-    url: "http://universities.hipolabs.com/search?name=",
+    // Added: https://cors-anywhere.herokuapp.com/ to secure
+    url: "https://cors-anywhere.herokuapp.com/http://universities.hipolabs.com/search?name=",
     async: true,
     dataType: 'json',
     success: function (data) {
-      console.log(arrayReturn)
       for (var i = 0; i < data.length; i++) {
         // var place = (data[i].name).toString();
         arrayReturn.push(data[i].name);
