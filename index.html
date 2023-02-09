@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 ​
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Bootsrap Version 5.3-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!--https://icons.getbootstrap.com/-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <!--Leaflet-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <!--CSS Style Here!-->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>University Explorer Guide</title>
-    <link rel="icon" type="image/png" href="./assets/images/pin-map.svg" />
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootsrap Version 5.3-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!--https://icons.getbootstrap.com/-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!--Leaflet-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <!--CSS Style Here!-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>University Explorer Guide</title>
+  <link rel="icon" type="image/png" href="./assets/images/pin-map.svg" />
+</head>
 ​
-  <body>
-    <header class="marginBottom">
-      <!--Responsive Navigation: https://getbootstrap.com/docs/5.3/components/navbar/-->
-      <nav class="navbar stickyi-top navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><i class="bi bi-pin-map"></i>&nbsp;&nbsp;University Explorer Guide</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-​
-        </div>
-      </nav>
-    </header>
-​
-    <main>
-      <!--For List of Places-->
+
+<body>
+  <header class="marginBottom">
+    <!--Responsive Navigation: https://getbootstrap.com/docs/5.3/components/navbar/-->
+    <nav class="navbar stickyi-top navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3">
-​
-            <!--Search-->
-            <form id="searchForm" class="d-flex marginBottom" role="search">
-              <input id="textbox-search" class="form-control me-2" type="search" placeholder="Enter Town"
-                aria-label="Search">
-              <button id="button-search" class="btn btn-outline-success" type="submit">Search Town</button>
-            </form>
-            <section id="dropdown" name="chooseUni">
-              <select name="uniChoice" id="uniList">
-                <option disabled hidden selected>Choose Uni</option>
-              </select>
-            </section>
-          </div>
-          <!--For Map Interface (LeafLet)-->
-          <div id="map" class="col-md-9">
-            <a href="#top"><button id="rel" class="btn btn-primary" type="button">Move Up</button></a>
-            <a><button id="locateRel" class="btn btn-primary" type="button">My Location</button></a>
-          </div>
+        <a class="navbar-brand" href="#"><i class="bi bi-pin-map"></i>&nbsp;&nbsp;University Explorer Guide</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        ​
+      </div>
+    </nav>
+  </header>
+  ​
+  <main>
+    <!--For List of Places-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          ​
+          <!--Search-->
+          <form id="searchForm" class="d-flex marginBottom" role="search">
+            <input id="textbox-search" class="form-control me-2" type="search" placeholder="Enter Town"
+              aria-label="Search">
+            <button id="button-search" class="btn btn-outline-success" type="submit">Search Town</button>
+          </form>
+          <section id="dropdown" name="chooseUni">
+            <select name="uniChoice" id="uniList">
+              <option disabled hidden selected>Choose Uni</option>
+            </select>
+          </section>
+        </div>
+        <!--For Map Interface (LeafLet)-->
+        <div id="map" class="col-md-9" style="float:right">
+          <a href="#top"><button id="rel" class="btn btn-primary" type="button">Move Up</button></a>
+          <a><button id="locateRel" class="btn btn-primary" type="button">My Location</button></a>
         </div>
       </div>
-    </main>
-​
-    <!--Map Leaflet-->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-    <!--Moment.js CDNJS
+    </div>
+  </main>
+  ​
+  <!--Map Leaflet-->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <!--Moment.js CDNJS
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   -->
-    <!--Bootstrap jsdevivr-->
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"></script>
-    <!--Project Script Here-->
-    <script src="./assets/js/script.js"></script>
-    <!-- <script src="./assets/js/leaflet-map.js"></script> -->
-    <script src="https://kit.fontawesome.com/91a6782aab.js" crossorigin="anonymous"></script>
-  </body>
+  <!--Bootstrap jsdevivr-->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!--Project Script Here-->
+  <script src="./assets/js/script.js"></script>
+  <!-- <script src="./assets/js/leaflet-map.js"></script> -->
+  <script src="https://kit.fontawesome.com/91a6782aab.js" crossorigin="anonymous"></script>
+</body>
 ​
+
 </html>

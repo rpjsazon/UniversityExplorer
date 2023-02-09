@@ -25,4 +25,9 @@ nav {
   padding: 10px;
   z-index: 500;
 }
-
+.container-fluid {
+  background: linear-gradient(to right, #3cb6ee33, #67d397);
+}
+.map {
+position: relative, right;
+}
