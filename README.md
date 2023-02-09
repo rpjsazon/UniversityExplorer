@@ -21,7 +21,7 @@ The repository can be found at href: https://github.com/rpjsazon/UniversityExplo
 
 This page can be found at href: https://rpjsazon.github.io/UniversityExplorer/
 
-![Alt text](https://github.com/rpjsazon/UniversityExplorer/assets/images%20Screenshot.png?raw=true)
+![Alt text]https://github.com/rpjsazon/UniversityExplorer/blob/Ryan-Test/assets/images/Screenshot.png?raw=true)
 
 
 ##  Usage
