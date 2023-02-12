@@ -10,13 +10,18 @@ In this project we were tasked with creating a website from scratch which incorp
 
 This app uses advanced JavaScript utilising JSON and JQuery, CSS with Bootstrap, HTML as well as the integration of third party API's.
 
+The API's used for this app are the HipoUni api and OpenTrip
+
 
 ## Installation
+
+Before viewing the page it is required that you visit href: https://cors-anywhere.herokuapp.com/corsdemo and click on the button to llow temporary access, this will allow the hipouni api to work.
+
 The repository can be found at href: https://github.com/rpjsazon/UniversityExplorer
 
 This page can be found at href: https://rpjsazon.github.io/UniversityExplorer/
 
-![Alt text](https://github.com/rpjsazon/UniversityExplorer/assets/images%20Screenshot.png?raw=true)
+![Alt text](https://github.com/rpjsazon/UniversityExplorer/blob/Ryan-Test/assets/images/Screenshot.png?raw=true)
 
 
 ##  Usage
