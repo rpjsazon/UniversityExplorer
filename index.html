@@ -30,28 +30,103 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- In case we need to activate. -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Explore
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Top Universities</a></li>
+                  <li><a class="dropdown-item" href="#">Best Cities to Study</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">OpenTripMap - WikiData - News (TBD)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
-
     <main>
       <!--For List of Places-->
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3">
-
             <!--Search-->
             <form id="searchForm" class="d-flex marginBottom" role="search">
               <input id="textbox-search" class="form-control me-2" type="search" placeholder="Enter Town"
                 aria-label="Search">
               <button id="button-search" class="btn btn-outline-success" type="submit">Search Town</button>
             </form>
-            <section id="dropdown" name="chooseUni">
-              <select name="uniChoice" id="uniList">
-                <option disabled hidden selected>Choose Uni</option>
-              </select>
-            </section>
+
+
+            <!--List of interesting place to visit near the radius of the location.-->
+            <div class="list">
+
+            </div>
+
+            <p class="fw-bold">Your current Location:</p>
+            <p id="currentLocationText">Click My Location!</p>
+
+            <p class="fw-bold">Display Places</p>
+            <!--Check Box-->
+            <div class="container">
+              <div class="row marginBottom">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    All
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Bank
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                  <label class="form-check-label" for="flexCheckChecked">
+                    ATM
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <p class="fw-bold">Take a look around</p>
+
+            <!--Places List-->
+            <ol class="list-group list-group-numbered marginBottom">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Subheading</div>
+                  Content for list item
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Subheading</div>
+                  Content for list item
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Subheading</div>
+                  Content for list item
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+              </li>
+            </ol>
           </div>
           <!--For Map Interface (LeafLet)-->
           <div id="map" class="col-md-9">
@@ -61,7 +136,6 @@
         </div>
       </div>
     </main>
-
     <!--Map Leaflet-->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
@@ -75,6 +149,12 @@
       crossorigin="anonymous"></script>
     <!--Project Script Here-->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/leaflet-map.js"></script>
+    <script src="./assets/js/placesList.js"></script>
+    <!-- <script src="./assets/js/hipoUni.js"></script> -->
+
+    <!-- <script src="./assets/js/trip.js"></script> -->
+    <!--FontAwesome Icons: https://fontawesome.com/icons-->
     <script src="https://kit.fontawesome.com/91a6782aab.js" crossorigin="anonymous"></script>
   </body>
 
